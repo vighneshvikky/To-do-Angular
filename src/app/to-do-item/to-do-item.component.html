@@ -1,0 +1,25 @@
+<div class="todo-item">
+    <label class="todo-checkbox-wrapper">
+      <input 
+        type="checkbox" 
+        class="todo-checkbox"
+        [checked]="todo.completed"
+        (change)="checkTaskCompletion()"
+      >
+      <span class="checkmark"></span>
+    </label>
+    
+    <span 
+      class="todo-text"
+      [class.completed]="todo.completed"
+    >
+      {{todo.title}}
+    </span>
+    
+    <button 
+      class="delete-button"
+      (click)="deleteTask()"
+    >
+      Delete
+    </button>
+  </div>

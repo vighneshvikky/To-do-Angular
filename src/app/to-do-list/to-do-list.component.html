@@ -1,0 +1,15 @@
+<div class="todos-container">
+    <h1 class="todos-title">Target of the Day</h1>
+    <ul class="todos-list">
+      <li 
+        *ngFor="let todo of userTodos"
+        class="todo-list-item"
+      >
+        <app-to-do-item 
+          [todo]="todo" 
+          (checkDelete)="deleteTask(todo.id)" 
+          (checkTask)="callCheckCompletion(todo.id)"
+        ></app-to-do-item>
+      </li>
+    </ul>
+  </div>
